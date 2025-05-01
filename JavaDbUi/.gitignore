@@ -40,4 +40,4 @@ build/
 /.idea/
 /userdb.ser
 /databaselist.ser
-/.DS_Store/
+../.DS_Store/
