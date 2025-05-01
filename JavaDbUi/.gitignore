@@ -34,11 +34,17 @@ build/
 ### VS Code ###
 .vscode/
 
-### Mac OS ###
+# Ignore macOS system file
 .DS_Store
-/lib/sqlikeApi.jar
-../.idea/
-/userdb.ser
-/databaselist.ser
-../.DS_Store
-../demo/
+
+# Ignore IntelliJ project files
+.idea/
+
+# Ignore compiled JARs
+JavaDbUi/lib/sqlikeApi.jar
+
+# Ignore serialized files
+JavaDbUi/userdb.ser
+JavaDbUi/databaselist.ser
+JacaDbUi/lib/
+
