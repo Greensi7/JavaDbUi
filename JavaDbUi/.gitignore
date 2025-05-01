@@ -37,7 +37,8 @@ build/
 ### Mac OS ###
 .DS_Store
 /lib/sqlikeApi.jar
-/.idea/
+../.idea/
 /userdb.ser
 /databaselist.ser
-../.DS_Store/
+../.DS_Store
+../demo/
