@@ -21,7 +21,7 @@ public class UserListWindow {
         Collection<UserRecord> users = db.getAllUsers();
 
         Stage window = new Stage();
-        window.initModality(Modality.APPLICATION_MODAL); // blocks interaction with other windows
+        window.initModality(Modality.APPLICATION_MODAL);
         window.setTitle("User List");
         window.setMinWidth(300);
         window.setMinHeight(400);
