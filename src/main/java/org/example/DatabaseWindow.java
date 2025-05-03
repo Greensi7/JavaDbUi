@@ -286,13 +286,20 @@ public class DatabaseWindow {
             }
             finally {
                 columnInputsBox.getChildren().clear();
+                primaryColumnRow = null;
                 if (selectColumnBox.getChildren().size() > 1) {
                     selectColumnBox.getChildren().subList(1, selectColumnBox.getChildren().size()).clear();
                 }
             }
         });
 
-        queryTypeBox.setOnAction(_ -> updateFieldVisibility());
+        queryTypeBox.setOnAction(_ -> {
+            updateFieldVisibility();
+            columnInputsBox.getChildren().clear();
+            primaryColumnRow = null;
+            if (selectColumnBox.getChildren().size() > 1) {
+                selectColumnBox.getChildren().subList(1, selectColumnBox.getChildren().size()).clear();
+            }});
         queryTypeBox.setValue(StandardQueryType.SELECT);
         updateFieldVisibility();
 
@@ -304,7 +311,6 @@ public class DatabaseWindow {
         StandardQueryType type = queryTypeBox.getValue();
         if (type == null) return;
 
-        // Hide and unmanaged all by default
         setDefault();
 
 
